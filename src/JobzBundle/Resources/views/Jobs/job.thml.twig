@@ -1,0 +1,15 @@
+{% extends "JobzBundle::layout.html.twig" %}
+
+{% block content %}
+    <div class="job-page-head">
+        <div class="company">{{ job.company }}</div>
+        <div class="location">{{ job.location }}</div>
+    </div>
+    <div class="job-title">
+        {{ job.position }}<span class="job-type">{{ job.type }}</span>
+    </div>
+    <div class="description">{{ job.description }}</div>
+    <div class="how-to-apply-title">How to apply</div>
+    <div class="how-to-apply">{{ job.howToApply }}</div>
+    <div class="created">{{ job.created|date('Y-m-d') }}</div>
+{% endblock %}

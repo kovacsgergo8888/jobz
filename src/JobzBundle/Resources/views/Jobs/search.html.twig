@@ -1,0 +1,14 @@
+{% extends 'JobzBundle::layout.html.twig' %}
+
+{% block content %}
+    {% if jobs is defined %}
+        Search result for "{{ keyword }}":
+        <table>
+            {% for job in jobs %}
+                {{ include('JobzBundle:Parts:_list.html.twig', {job: job}) }}
+            {% endfor %}
+        </table>
+    {% else %}
+        No results!
+    {% endif %}
+{% endblock %}

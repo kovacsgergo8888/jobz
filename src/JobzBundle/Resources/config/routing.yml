@@ -1,0 +1,22 @@
+jobz_home:
+    path:     /
+    defaults: { _controller: JobzBundle:Jobz:index }
+
+jobz_category:
+    path: /category/{id}
+    defaults: { _controller: JobzBundle:Jobz:showCatgory }
+
+jobz_search:
+    path: /search
+    defaults: { _controller: JobzBundle:Jobz:search }
+
+jobz_job:
+    path: /job/{id}
+    defaults: { _controller: JobzBundle:Jobz:showJob }
+
+jobz_new_job:
+    path: /newjob
+    defaults: { _controller: JobzBundle:Jobz:newJob }
+
+logout:
+    path: /logout

@@ -1,0 +1,15 @@
+{% extends "JobzBundle::layout.html.twig" %}
+
+{% block title %}{{ 'HomepageTitle'|trans }}{% endblock %}
+
+{% block content %}
+    Latest Jobs
+    <table>
+        {% for category in categories %}
+            <th><a href="{{ path("jobz_category", {id: category.id}) }}" class="">{{ category.name }}</a></th>
+            {% for job in category.jobs %}
+                {{ include('JobzBundle:Parts:_list.html.twig', {job: job}) }}
+            {% endfor %}
+        {% endfor %}
+    </table>
+{% endblock %}

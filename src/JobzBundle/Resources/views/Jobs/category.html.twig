@@ -1,0 +1,5 @@
+{% extends "JobzBundle::layout.html.twig" %}
+
+{% block content %}
+    {{ include('JobzBundle:Parts:_category.html.twig', {category: category, jobs: jobs}) }}
+{% endblock %}

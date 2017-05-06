@@ -1,0 +1,11 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block content %}
+    <div>Menu</div>
+    <ul>
+        <li><a href="{{ path("admin_category_list") }}">Categories</a></li>
+        <li><a href="{{ path("admin_job_list") }}">Jobs</a></li>
+        {#<li><a href="{{ path("") }}">Informations</a></li>#}
+        {#<li><a href="{{ path("") }}">Menus</a></li>#}
+    </ul>
+{% endblock %}

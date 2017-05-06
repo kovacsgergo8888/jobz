@@ -1,0 +1,7 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div><a href="{{ path("admin_homepage") }}">AdminSite</a></div>
+    <div><a href="{{ path("logout") }}">Log out</a></div>
+    {% block content %}{% endblock %}
+{% endblock %}

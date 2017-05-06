@@ -1,0 +1,6 @@
+<table>
+    <th colspan="4">{{ category.name }}</th>
+    {% for job in jobs %}
+        {{ include('JobzBundle:Parts:_list.html.twig', {job: job}) }}
+    {% endfor %}
+</table>

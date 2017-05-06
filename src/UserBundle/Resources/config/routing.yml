@@ -1,0 +1,7 @@
+user_register:
+  path: /register
+  defaults: {_controller: UserBundle:Registration:register}
+
+user_login:
+  path: /login
+  defaults: {_controller: UserBundle:Login:login}

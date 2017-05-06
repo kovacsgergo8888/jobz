@@ -1,0 +1,12 @@
+services:
+  jobz.category.manager:
+    class: JobzBundle\Services\CategoryManager
+    arguments: ["@doctrine.orm.entity_manager", "@form.factory"]
+
+  jobz.job.manager:
+      class: JobzBundle\Services\JobManager
+      arguments: ["@doctrine.orm.entity_manager", "@form.factory"]
+
+#    jobz.example:
+#        class: JobzBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

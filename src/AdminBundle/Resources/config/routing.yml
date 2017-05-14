@@ -33,3 +33,20 @@ admin_job_edit:
 admin_job_delete:
     path: /job/delete/{id}
     defaults: { _controller: AdminBundle:Job:delete }
+
+admin_information_list:
+    path: /informations
+    defaults: { _controller: AdminBundle:Information:list }
+
+admin_information_new:
+    path: /newinfo
+    defaults: { _controller: AdminBundle:Information:new }
+
+admin_information_edit:
+    path: /editinfo/{id}
+    defaults: { _controller: AdminBundle:Information:edit }
+
+admin_information_delete:
+    path: /deleteinfo/{id}
+    defaults: { _controller: AdminBundle:Information:delete }
+

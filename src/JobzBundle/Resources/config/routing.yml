@@ -20,3 +20,7 @@ jobz_new_job:
 
 logout:
     path: /logout
+
+jobz_information:
+    path: /information/{id}
+    defaults: { _controller: JobzBundle:Information:show }

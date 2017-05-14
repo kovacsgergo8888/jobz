@@ -2,6 +2,8 @@
 
 namespace AdminBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use AdminBundle\Entity\Menu;
 use Doctrine\ORM\Mapping as ORM;
 
 /**

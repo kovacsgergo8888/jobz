@@ -6,9 +6,8 @@
         {% for information in informations %}
             <tr>
                 <td><a href="{{ path("admin_information_edit", {id: information.id}) }}">{{information.id}}</a></td>
-                <td>{{information.position}}</td>
-                <td>{{information.email}}</td>
-                <td>{{information.created|date("Y-m-d")}}</td>
+                <td>{{information.title}}</td>
+                <td>{{information.description}}</td>
                 <td><a href="{{ path("admin_information_delete", {id: information.id}) }}">delete</a></td>
             </tr>
         {% endfor %}

@@ -10,6 +10,9 @@
             <li><a href="{{ path('logout') }}" class="href">Log out</a></li>
         </ul>
     </div>
+    <div class="header-menu">
+        {{ render(controller('JobzBundle:Menu:index', {position: 'head'})) }}
+    </div>
     <div class="search">
         <form action="{{ path("jobz_search") }}" method="get">
             <input type="text" name="keyword" />
@@ -17,4 +20,7 @@
         </form>
     </div>
     {% block content %}{% endblock %}
+    <div class="footer">
+        {{ render(controller('JobzBundle:Menu:index', {position: 'foot'})) }}
+    </div>
 {% endblock %}

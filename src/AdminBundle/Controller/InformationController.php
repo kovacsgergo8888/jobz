@@ -23,14 +23,10 @@ class InformationController extends Controller
 
         if ($form === true) {
             $this->get("session")->getFlashBag()->add("succes", "Information saved");
-            $this->redirectToRoute("admin_information_list");
+            return $this->redirectToRoute("admin_information_list");
         }
 
-        return $this->render("AdminBundle::simple_form.html.twig",
-            [
-                "form" => $form->createView(),
-            ]
-        );
+        return $this->render("AdminBundle::simple_form.html.twig", ["form" => $form->createView()]);
     }
 
     public function editAction(Request $request, $id)
@@ -41,14 +37,10 @@ class InformationController extends Controller
 
         if ($form === true) {
             $this->get("session")->getFlashBag()->add("succes", "Information saved");
-            $this->redirectToRoute("admin_information_list");
+            return $this->redirectToRoute("admin_information_list");
         }
 
-        return $this->render("AdminBundle::simple_form.html.twig",
-            [
-                "form" => $form->createView()
-            ]
-        );
+        return $this->render("AdminBundle::simple_form.html.twig",["form" => $form->createView()]);
 
 
     }

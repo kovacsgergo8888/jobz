@@ -49,4 +49,20 @@ admin_information_edit:
 admin_information_delete:
     path: /deleteinfo/{id}
     defaults: { _controller: AdminBundle:Information:delete }
+    
+admin_menu_list:
+    path: /menus
+    defaults: { _controller: AdminBundle:Menu:list }
+
+admin_menu_new:
+    path: /newmenu
+    defaults: { _controller: AdminBundle:Menu:new }
+
+admin_menu_edit:
+    path: /editmenu/{id}
+    defaults: { _controller: AdminBundle:Menu:edit }
+
+admin_menu_delete:
+    path: /deletemenu/{id}
+    defaults: { _controller: AdminBundle:Menu:delete }
 

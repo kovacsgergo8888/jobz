@@ -1,0 +1,9 @@
+<ul class="menu">
+{% for element in menuElements %}
+    <li>
+        <a href="{{ path('jobz_information', {id: element.information.id}) }}">
+            {{ element.information.title }}
+        </a>
+    </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,15 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block content %}
+    <a href="{{ path('admin_menu_new') }}">New menu</a>
+    <table>
+        {% for menu in menus %}
+            <tr>
+                <td><a href="{{ path("admin_menu_edit", {id: menu.id}) }}">{{menu.information.title}}</a></td>
+                <td>{{menu.position}}</td>
+                <td>{{menu.sortOrder}}</td>
+                <td><a href="{{ path("admin_menu_delete", {id: menu.id}) }}">delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
